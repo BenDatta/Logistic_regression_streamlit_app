@@ -18,17 +18,6 @@ A beautiful, interactive web application for breast cancer diagnosis prediction 
 - **Medical Recommendations**: Provides actionable next steps based on predictions
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-## 🎯 Demo
-
-[Insert screenshot or GIF of your app here]
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip package manager
-
 ### Installation
 
 1. **Clone the repository**
@@ -110,57 +99,6 @@ The model uses 30 features derived from digitized images of fine needle aspirate
 - **[NumPy](https://numpy.org/)**: Numerical computing
 - **[Pillow](https://pillow.readthedocs.io/)**: Image processing
 
-## 📝 Requirements
-
-```
-streamlit>=1.28.0
-scikit-learn>=1.3.0
-pandas>=2.0.0
-numpy>=1.24.0
-pillow>=10.0.0
-```
-
 ## ⚠️ Medical Disclaimer
 
 **IMPORTANT**: This application is for educational and informational purposes only. It should NOT be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of qualified healthcare professionals with any questions you may have regarding a medical condition.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📧 Contact
-
-Ben Datta - [@BenDatta](https://github.com/BenDatta)
-
-Project Link: [https://github.com/BenDatta/Logistic_regression_streamlit_app](https://github.com/BenDatta/Logistic_regression_streamlit_app)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Wisconsin Breast Cancer Dataset from UCI Machine Learning Repository
-- Streamlit team for the amazing framework
-- All contributors who helped improve this project
-
----
-
-⭐ If you find this project helpful, please consider giving it a star!
-
-## 📸 Screenshots
-
-### Main Interface
-[Add screenshot of main interface]
-
-### Benign Prediction
-[Add screenshot of benign result]
-
-### Malignant Prediction
-[Add screenshot of malignant result]
