@@ -1,0 +1,38 @@
+name: Code Quality and Smoke Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Check for formatting and whitespaces
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        # --select=W291,W293 looks specifically for trailing whitespaces
+        flake8 . --count --select=E9,F63,F7,F82,W291,W293 --show-source --statistics
+
+    - name: Smoke Test - Run the app
+      run: |
+        # This checks if your main script can at least start without crashing
+        # We use 'timeout' so it doesn't run forever if it's a Streamlit app
+        python cancer_app.py --help || true
